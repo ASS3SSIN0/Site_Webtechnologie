@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projectdetail – Alexandros Koulouris</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-3SCj4nYgJQYXPstc7Dbdb+6TJ0gCqTLyqZEnq8lBQ3N3K+7vMKW5Gl/zhcuXxS9y"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header and navigation -->
+    <header class="bg-dark text-white py-3">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.png" alt="Logo" style="height: 60px;">
+        </a>
+        <div class="navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Project Detail -->
+    <main class="py-5">
+      <div class="container">
+        <a href="portfolio.html" class="btn btn-link mb-3">&larr; Terug naar portfolio</a>
+        <div id="projectContent" class="row g-5">
+          <!-- Content wordt dynamisch geladen via JavaScript -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-1">&copy; 2025 Alexandros Koulouris</p>
+        <p class="mb-0">
+          Portfolio projectpagina.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-yoN4kS8ZX5ULUBMG9AUUs53lLnnZmsxpGztL6IKZlZRzlLEJKTpw8jFn83HCOg26"
+      crossorigin="anonymous"
+    ></script>
+    
+    <!-- Project Data Script -->
+    <script>
+      const projects = {
+        'parrot-os': {
+          image: 'assets/2-Project.webp',
+          title: 'Gepersonaliseerde Parrot OS',
+          intro: 'Voor dit project heb ik een volledig gepersonaliseerd Parrot OS-systeem gebouwd zonder grafische interface. Het systeem is geoptimaliseerd voor command-line gebruik met een focus op efficiëntie en productiviteit bij cybersecurity taken en pentesting.',
+          sections: [
+            {
+              title: 'Configuraties en Personalisaties',
+              items: [
+                '<strong>Kitty Terminal:</strong> Snelle, feature-rijke terminal emulator met GPU-acceleratie',
+                '<strong>Zsh Shell:</strong> Geavanceerde shell met intelligente auto-completion',
+                '<strong>Powerlevel10k Theme:</strong> Krachtige en esthetische prompt met git-integratie',
+                '<strong>Custom Aliases & Scripts:</strong> Geautomatiseerde workflows voor pentesting tools',
+                '<strong>Vim/Neovim Configuratie:</strong> Geoptimaliseerde text editor voor code en scripting',
+                '<strong>Tmux Setup:</strong> Terminal multiplexer voor efficiënt sessie-beheer',
+                '<strong>Security Tools:</strong> Pre-configured pentesting toolkit (Nmap, Metasploit, Burp Suite, etc.)'
+              ]
+            },
+            {
+              title: 'Technische Details',
+              text: 'Het systeem draait volledig headless (zonder GUI), wat resulteert in minimaal resource-gebruik en maximale prestaties. Alle configuraties zijn gedocumenteerd in dotfiles en kunnen eenvoudig worden gedeployed via geautomatiseerde scripts.'
+            },
+            {
+              title: 'Resultaat',
+              text: 'Een lichtgewicht, snelle en volledig aangepaste penetration testing omgeving die mijn workflow optimaliseert. De CLI-only approach zorgt voor een steile leercurve maar levert uiteindelijk superieure efficiëntie en controle op.'
+            }
+          ]
+        },
+        'netwerk': {
+          image: 'assets/3-Project.jpg',
+          title: 'Netwerksegmentatie - TopDesign',
+          intro: 'Voor dit project heb ik een bedrijfsnetwerk herontworpen om verschillende afdelingen logisch van elkaar te scheiden. Door VLAN\'s en subnetten te gebruiken hebben we de veiligheid en prestaties verbeterd. Apparaten in het netwerk communiceren enkel indien noodzakelijk, waardoor de kans op verspreiding van malware klein is.',
+          sections: [
+            {
+              title: 'Doelstellingen',
+              items: [
+                'Analyse van bestaande netwerkarchitectuur',
+                'Ontwerpen van een VLAN-structuur',
+                'Implementeren en testen op switches en routers',
+                'Documentatie en overdracht aan IT-team'
+              ]
+            },
+            {
+              title: 'Resultaat',
+              text: 'Het resultaat is een schaalbaar netwerk met duidelijke segmenten. De beveiliging is verhoogd en prestaties zijn merkbaar verbeterd. Dit project vormt een solide basis voor verdere uitbreidingen, zoals intrusie detectie en veilige toegang tot cloud diensten.'
+            }
+          ]
+        },
+        'web-hacking': {
+          image: 'assets/4-Project.png',
+          title: 'Web Hacking',
+          intro: 'Dit project richt zich op het identificeren en exploiteren van kwetsbaarheden in webapplicaties. Door middel van hands-on praktijk heb ik verschillende web hacking technieken geleerd en toegepast op test omgevingen.',
+          sections: [
+            {
+              title: 'Aangeleerde Technieken',
+              items: [
+                '<strong>SQL Injection:</strong> Manipulatie van database queries via input validatie zwakheden',
+                '<strong>Cross-Site Scripting (XSS):</strong> Injectie van malicious scripts in webpaginas',
+                '<strong>Cross-Site Request Forgery (CSRF):</strong> Uitvoeren van ongeautoriseerde acties namens gebruikers',
+                '<strong>File Inclusion:</strong> Local File Inclusion (LFI) en Remote File Inclusion (RFI) exploits',
+                '<strong>Authentication Bypass:</strong> Het omzeilen van login mechanismen',
+                '<strong>Directory Traversal:</strong> Toegang krijgen tot bestanden buiten de webroot',
+                '<strong>Command Injection:</strong> OS commando\'s uitvoeren via web input',
+                '<strong>SSRF (Server-Side Request Forgery):</strong> Server manipulatie voor interne requests'
+              ]
+            },
+            {
+              title: 'Tools & Methodologie',
+              text: 'Voor dit project heb ik gebruik gemaakt van tools zoals Burp Suite, OWASP ZAP, SQLmap, en custom Python scripts. De methodologie volgt de OWASP Testing Guide voor systematische security assessments van webapplicaties.'
+            },
+            {
+              title: 'Resultaat',
+              text: 'Door dit project heb ik een diepgaand begrip ontwikkeld van web security principes en veelvoorkomende kwetsbaarheden. Deze kennis is essentieel voor het bouwen van veilige webapplicaties en het uitvoeren van professionele penetratietesten.'
+            }
+          ]
+        },
+        'powershell': {
+          image: 'assets/6-Project.jpg',
+          title: 'PowerShell Automatisatie',
+          intro: 'Dit project omvat de ontwikkeling van een uitgebreid PowerShell script voor de geautomatiseerde configuratie van Windows Server omgevingen. Het script werkt zowel in GUI als console-only omgevingen en elimineert tijdrovende handmatige configuratiestappen.',
+          sections: [
+            {
+              title: 'Geautomatiseerde Taken',
+              items: [
+                '<strong>Systeem Configuratie:</strong> Automatische hostname, timezone, en network settings',
+                '<strong>Active Directory Setup:</strong> Geautomatiseerde installatie en configuratie van AD Domain Services',
+                '<strong>User & Group Management:</strong> Bulk creatie van gebruikers, groepen en organizational units',
+                '<strong>Security Policies:</strong> Configuratie van password policies, account lockout en audit settings',
+                '<strong>Role Installation:</strong> Geautomatiseerde deployment van server roles (DNS, DHCP, IIS)',
+                '<strong>Windows Updates:</strong> Automatische updates en patch management',
+                '<strong>Firewall Configuratie:</strong> Network security rules en port forwarding',
+                '<strong>Logging & Monitoring:</strong> Event log configuratie en remote monitoring setup'
+              ]
+            },
+            {
+              title: 'Technische Implementatie',
+              text: 'Het script maakt gebruik van PowerShell DSC (Desired State Configuration) voor idempotente configuratie, error handling voor robuuste uitvoering, en gedetailleerde logging voor troubleshooting. Compatibel met zowel Windows Server GUI als Server Core installaties.'
+            },
+            {
+              title: 'Resultaat',
+              text: 'Een volledig geautomatiseerd deployment proces dat de tijd voor server configuratie reduceert van uren naar minuten. Het script zorgt voor consistente instellingen over meerdere servers en vermindert menselijke fouten tijdens de setup. Dit maakt snelle disaster recovery en schaalbaarheid mogelijk.'
+            }
+          ]
+        },
+        'monitoring': {
+          image: 'assets/5-Project.jpg',
+          title: 'Monitoring & Logging met Zabbix',
+          intro: 'Dit project omvat de implementatie en configuratie van Zabbix Network Management System voor uitgebreide monitoring en logging van netwerk- en systeem infrastructuur. Focus op proactieve monitoring, event detection en geautomatiseerde alerting.',
+          sections: [
+            {
+              title: 'Monitoring Componenten',
+              items: [
+                '<strong>Lokale Monitoring:</strong> System performance metrics (CPU, geheugen, disk usage)',
+                '<strong>Zabbix NMS Installatie:</strong> Volledige setup en configuratie van Zabbix server',
+                '<strong>Hosts & Items:</strong> Configuratie van monitoring targets en data collection',
+                '<strong>Triggers & Events:</strong> Geautomatiseerde alarmen en event handling',
+                '<strong>Templates:</strong> Herbruikbare monitoring templates voor consistente configuratie',
+                '<strong>SNMP Monitoring:</strong> Network device monitoring via SNMP protocol',
+                '<strong>Web Monitoring:</strong> Website availability en response time tracking',
+                '<strong>Dashboards & Maps:</strong> Visualisatie van infrastructuur status'
+              ]
+            },
+            {
+              title: 'Logging & Auditing',
+              items: [
+                '<strong>Linux Logging:</strong> Syslog configuratie en log analysis',
+                '<strong>Windows Logging:</strong> Event log management en auditing policies',
+                '<strong>Zabbix Log Monitoring:</strong> Geïntegreerde log file monitoring en parsing',
+                '<strong>Custom Scripts:</strong> PowerShell scripts voor battery health monitoring'
+              ]
+            },
+            {
+              title: 'Technische Implementatie',
+              text: 'Gebruik van Zabbix agents voor data collection, SNMP voor network device monitoring, en custom scripts voor specifieke metrics. Configuratie van notifications via email en webhook voor incident response. Implementatie van grafische dashboards voor real-time visibility.'
+            },
+            {
+              title: 'Resultaat',
+              text: 'Een volledig functioneel monitoring systeem dat proactief problemen detecteert voordat ze impact hebben op gebruikers. Gecentraliseerde logging maakt troubleshooting efficiënter en audit trails zorgen voor compliance. Het systeem monitort zowel Linux als Windows infrastructuur met geautomatiseerde alerting.'
+            }
+          ]
+        }
+      };
+
+      // Haal project ID uit URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('id') || 'powershell';
+      const project = projects[projectId];
+
+      if (project) {
+        let html = `
+          <div class="col-lg-7">
+            <img src="${project.image}" class="img-fluid rounded shadow-sm" alt="${project.title}" style="max-height: 400px; object-fit: contain;">
+          </div>
+          <div class="col-lg-5">
+            <h1 class="h3 mb-3">${project.title}</h1>
+            <p>${project.intro}</p>`;
+        
+        project.sections.forEach(section => {
+          html += `<h2 class="h5 mt-4">${section.title}</h2>`;
+          if (section.items) {
+            html += '<ul>';
+            section.items.forEach(item => {
+              html += `<li>${item}</li>`;
+            });
+            html += '</ul>';
+          } else if (section.text) {
+            html += `<p>${section.text}</p>`;
+          }
+        });
+        
+        html += '</div>';
+        document.getElementById('projectContent').innerHTML = html;
+      }
+    </script>
+  </body>
+</html>
